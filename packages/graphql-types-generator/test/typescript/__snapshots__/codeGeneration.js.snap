@@ -1517,3 +1517,28 @@ export type starshipDetailsFragment = {
 };
 "
 `;
+
+exports[`TypeScript code generation #generateSource() two dimensional array of non-model type 1`] = `
+"/* tslint:disable */
+/* eslint-disable */
+//  This file was automatically generated and should not be edited.
+
+export type MultiDimensionalArrayTest = {
+  __typename: \\"MultiDimensionalArrayTest\\",
+  id: string,
+  name: string,
+  abc?: ABC | null,
+};
+
+export type ABC = {
+  __typename: \\"ABC\\",
+  abc?:  Array<Array<XYZ | null>> | null,
+};
+
+export type XYZ = {
+  __typename: \\"XYZ\\",
+  id: string,
+  name: string,
+};
+"
+`;

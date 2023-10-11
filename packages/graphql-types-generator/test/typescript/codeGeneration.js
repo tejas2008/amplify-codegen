@@ -327,5 +327,18 @@ describe('TypeScript code generation', function() {
       const source = generateSource(context);
       expect(source).toMatchSnapshot();
     });
+
+    test.only('two dimensional array of non-model type', () => {
+      const { compileFromSource } = setup(miscSchema);
+      const context = compileFromSource(`
+        query MultiTest {
+          multiDimensionalArrayTest {
+            abc
+          }
+        }
+      `);
+      const source = generateSource(context);
+      expect(source).toMatchSnapshot();
+    });
   });
 });

@@ -64,8 +64,24 @@ type Query {
   scalarTest: Boolean!
   arrayTest: [QueryObject]
   echo(msg: String): String
+  multiDimensionalArrayTest: MultiDimensionalArrayTest
 }
 
 type QueryObject {
   test: String
+}
+
+type MultiDimensionalArrayTest {
+  id: ID!
+  name: String!
+  abc: ABC
+}
+
+type XYZ {
+  id: ID!
+  name: String!
+}
+
+type ABC {
+  abc: [[XYZ]]
 }
