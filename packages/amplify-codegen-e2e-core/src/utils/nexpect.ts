@@ -454,6 +454,7 @@ function chain(context: Context): ExecutionContext {
       function onLine(data: string | Buffer) {
         noOutputTimer.reschedule(context.noOutputTimeout);
         data = data.toString();
+        console.log(data);
         if (process.env && process.env.VERBOSE_LOGGING_DO_NOT_USE_OR_YOU_WILL_BE_FIRED) {
           console.log(data);
         }
